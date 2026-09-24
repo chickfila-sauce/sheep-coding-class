@@ -1,0 +1,104 @@
+/* ============================
+   Cold War Military Theme
+   ============================ */
+
+:root {
+    --bg: #1e1f1c;          /* dark steel */
+    --card: #2b2d29;        /* armor plating */
+    --text: #e2e2e2;        /* faded white */
+    --accent: #b22222;      /* Soviet red */
+    --accent-light: #d14a4a;
+    --nav-bg: #3a3c37;      /* olive drab */
+    --link: #c9d18c;        /* NATO khaki */
+}
+
+/* Page background + text */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 1rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Card-like sections */
+header, nav, main, section {
+    background-color: var(--card);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--accent-light);
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-light);
+}
+
+/* ============================
+   Dropdown Navigation Menu
+   ============================ */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* Top-level nav links */
+nav a {
+    color: var(--link);
+    font-weight: bold;
+}
+
+/* Dropdown container */
+.has-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--nav-bg);
+    padding: 0.5rem;
+    border-radius: 4px;
+    list-style: none;
+    min-width: 220px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.dropdown-menu li {
+    padding: 0.3rem 0;
+}
+
+.dropdown-menu a:hover {
+    color: var(--accent-light);
+}
